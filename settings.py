@@ -2,23 +2,22 @@ import os
 import time
 import sys
 
+print('Hello!')
 
-def start_program():
-    time.sleep(0.5)
+time.sleep(1)
 
-    print('Hello!')
 
-    time.sleep(1)
-
-    osinput = input('''Select your operating system from the list below:
-     1) RedHat Linux (Fedora, CentOs);
-     2) Debian-like Linux (ubuntu, Pop_os!, Mint);
-     3) Arch/Mangaro 
-     Your aswer: ''')
+osinput = input('''Select your operating system from the list below:
+1) RedHat Linux (Fedora, CentOs);
+2) Debian-like Linux (ubuntu, Pop_os!, Mint);
+3) Arch/Mangaro 
+Your aswer: ''')
 
 
 # Function for checking VIM
 def install_vim():
+    osinput = start_program(osinput)
+
     start = input('Have you already installed VIM? (y/n) ')
 
     if start == 'y':
@@ -33,7 +32,7 @@ def install_vim():
                 os.system('sudo yum install vim -y')
             if osinput == 2:
                 os.system('sudo apt install vim -y')
-            if osinput == 3:
+            if start_program() == 3:
                 os.system('sudo pacman -S vim -y')
 
             # If none of the options work
@@ -59,4 +58,4 @@ def settings():
     os.system('    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
 
 
-install_vim()
+start_program()
