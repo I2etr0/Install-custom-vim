@@ -22,7 +22,9 @@ def install_vim():
     if start == 'y':
         settings()
     else:
-        install = input('Want to install VIM now? (y\n) ')
+        install = input('Want to install VIM now? (y\\n) ')
+
+        #Login to the program
         if install == 'y':
             if osinput == 1:
                 os.system('sudo yum install vim -y')
@@ -30,9 +32,13 @@ def install_vim():
                 os.system('sudo apt install vim -y')
             if osinput == 3:
                 os.system('sudo pacman -S vim -y')
+
+            #If none of the options work
             else:
                 print('You entered an invalid number')
                 install_vim()
+
+        #Exit from program
         else:
             print('All right! Goodbye!')
             sys.exit()
