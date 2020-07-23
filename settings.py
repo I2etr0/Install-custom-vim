@@ -1,5 +1,6 @@
 import os
 import time
+import sys
 
 time.sleep(0.5)
 
@@ -32,6 +33,9 @@ def install_vim():
             else:
                 print('You entered an invalid number')
                 install_vim()
+        else:
+            print('All right! Goodbye!')
+            sys.exit()
 
 
 # Function for settings VIM
