@@ -14,6 +14,7 @@ osinput = input('''Select your operating system from the list below:
  Your aswer: ''')
 
 
+#Function for checking VIM
 def install_vim():
     start = input('Have you already installed VIM? (y/n) ')
 
@@ -31,6 +32,7 @@ def install_vim():
             else:
                 print('You entered an invalid number')
                 install_vim()
+
 
 # Function for settings VIM
 def settings():
