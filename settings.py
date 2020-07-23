@@ -32,7 +32,7 @@ def install_vim():
                 os.system('sudo yum install vim -y')
             if osinput == 2:
                 os.system('sudo apt install vim -y')
-            if start_program() == 3:
+            if osinput == 3:
                 os.system('sudo pacman -S vim -y')
 
             # If none of the options work
