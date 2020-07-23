@@ -34,9 +34,16 @@ def install_vim():
 
 
 def settings():
-    os.system('cd ~/Downloads && ls')
+    os.system('cd ~/Downloads && ls -la')
     time.sleep(0.3)
-    print('All is OK')
+    os.system('sudo git clone https://github.com/I2etr0/.vimrc.git')
+    time.sleep(1)
+    os.system('cd .vimrc/')
+    os.system('sudo mv .vimrc ~/')
+    os.system('curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\')
+    os.system('    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+
+
 
 
 install_vim()
