@@ -32,7 +32,7 @@ def install_vim():
                 print('You entered an invalid number')
                 install_vim()
 
-
+# Function for settings VIM
 def settings():
     os.system('cd ~/Downloads && ls -la')
     time.sleep(0.3)
