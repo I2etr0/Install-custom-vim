@@ -16,7 +16,6 @@ Your aswer: ''')
 
 # Function for checking VIM
 def install_vim():
-    osinput = start_program(osinput)
 
     start = input('Have you already installed VIM? (y/n) ')
 
