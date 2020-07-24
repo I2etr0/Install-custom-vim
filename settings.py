@@ -6,7 +6,6 @@ print('Hello!')
 
 time.sleep(1)
 
-
 osinput = input('''Select your operating system from the list below:
 1) RedHat Linux (Fedora, CentOs);
 2) Debian-like Linux (ubuntu, Pop_os!, Mint);
@@ -16,7 +15,6 @@ Your aswer: ''')
 
 # Function for checking VIM
 def install_vim():
-
     start = input('Have you already installed VIM? (y/n) ')
 
     if start == 'y':
